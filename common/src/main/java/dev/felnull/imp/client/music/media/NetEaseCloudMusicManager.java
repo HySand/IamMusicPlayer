@@ -106,8 +106,7 @@ public class NetEaseCloudMusicManager {
     }
 
     public Pair<String, List<String>> getNameAndArtist(JsonObject songJson) {
-        var aljo = songJson.getAsJsonObject("al");
-        var name = aljo.get("name").getAsString();
+        var name = songJson.get("name").getAsString();
 
         List<String> artists = new ArrayList<>();
         var arjo = songJson.getAsJsonArray("ar");
